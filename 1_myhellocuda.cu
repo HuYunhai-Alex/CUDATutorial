@@ -9,6 +9,6 @@ __global__ void hello_world(){
 
 int main() {
     hello_world<<<2,2>>>();
-    cudaDeviceSynchronize();
+    cudaDeviceSynchronize(); // 用于同步cpu，实测关闭后不会输出
     return 0;
 }
